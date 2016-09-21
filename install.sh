@@ -11,6 +11,8 @@
 #=============================================================================
 
 #in_dir="$(cd "$(dirname "$0")" && pwd)"
+cp_cmd="$(which cp)"
+mv_cmd="$(which mv)"
 retval=0
 in_file=(authorinfo.vim DrawIt.vba install.sh vimrc)
 
@@ -31,18 +33,19 @@ if [ ! -d ~/.vim/bundle ];then
     retval=$?
     if [ $retval -ne 0 ];then
         [ -f ~/.vimrc ] && { 
-        /usr/bin/mv ~/.vimrc ~/.vimrc.hyper.bak > /dev/null 2>&1
-        /usr/bin/cp ./vimrc ~/.vimrc > /dev/null 2>&1
-        } || /usr/bin/cp ./vimrc ~/.vimrc > /dev/null 2>&1
+        mv_cmd ~/.vimrc ~/.vimrc.hyper.bak > /dev/null 2>&1
+        cp_cmd ./vimrc ~/.vimrc > /dev/null 2>&1
+        } || cp_cmd ./vimrc ~/.vimrc > /dev/null 2>&1
     else
-        echo "Nothing to do:Can't install VundleVim"
+        echo "Nothing to do:Can't install VundleVim" >&2
+        exit 3
     fi
 else
-    /usr/bin/cp ./vimrc ~/.vimrc > /dev/null 2>&1
+    cp_cmd ./vimrc ~/.vimrc > /dev/null 2>&1
 fi
 
 #Install the plugins use VundleVim
 vim +PluginInstall +qall
 retval=$?
 [ $retval -ne 0 ] && cd ~/.vim/bundle/YouCompleteMe/ && ./install.py > /dev/null 2>&1
-/usr/bin/cp ./authorinfo.vim ~/.vim/bundle/nerdcommenter/plugin/
+cp_cmd ./authorinfo.vim ~/.vim/bundle/nerdcommenter/plugin/
