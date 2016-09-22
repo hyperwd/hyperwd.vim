@@ -22,7 +22,7 @@ $ vim +PlugInstall +qa
 
 ### Usage
 
-1. <F4>,    when you type <F4>,this will add in the head of your source file,and
+1. "<F4>",    when you type <F4>,this will add in the head of your source file,and
    when you type <F4> again,It will update automatically.
  #=============================================================================
  #     FileName: test.py                                                          
@@ -34,30 +34,32 @@ $ vim +PlugInstall +qa
  #   LastChange: 2016-09-22 15:32:04                                           
  #      History:                                                               
  #=============================================================================
- How to config the authorinfo?
+ How to config the authorinfo?<br>
     vim ~/.vim/plugged/hyperwd.vim/plugin/hypwerwd.vim
-1. <F5>     Change the theme (solarized or Zenburn)
-1. z[a|c|o|...],    The most basic commands are zc to close a fold and zo to open one. See
+1. "<F5>"     Change the theme (solarized or Zenburn)
+1. "z[a|c|o|...]",    The most basic commands are zc to close a fold and zo to open one. See
    :help fold-commands for full documentation.
-1. Ctrl+n,  Open NERDTree with Ctrl+n
-1. <F8>,    If you type the F8 key will toggle the Tagbar window.
-1. Ctrl+p,   Check :help ctrlp-commands for other commands.
+1. "Ctrl+n",  Open NERDTree with Ctrl+n
+1. "<F8>",    If you type the F8 key will toggle the Tagbar window.
+1. "Ctrl+p",   Check :help ctrlp-commands for other commands.
 
 
 ### `Plugins` list
-    'tmhedberg/SimpylFold'   
-    'vim-scripts/indentpython
-    'scrooloose/syntastic'   
-    'jnurmine/Zenburn'       
-    'altercation/vim-colors-s
-    'scrooloose/nerdtree'    
-    'jistr/vim-nerdtree-tabs'
-    'majutsushi/tagbar'      
-    'kien/ctrlp.vim'         
-    'tpope/vim-fugitive'     
-    'Lokaltog/powerline', {'r
-    'scrooloose/nerdcommenter
-    'hyperwd/hyperwd.vim'    
+
+'tmhedberg/SimpylFold'                                  
+'vim-scripts/indentpython.vim'                          
+'scrooloose/syntastic'                                  
+'jnurmine/Zenburn'                                      
+'altercation/vim-colors-solarized'                      
+'scrooloose/nerdtree'                                   
+'jistr/vim-nerdtree-tabs'                               
+'majutsushi/tagbar'                                     
+'kien/ctrlp.vim'                                        
+'tpope/vim-fugitive'                                    
+'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+'scrooloose/nerdcommenter'                              
+'hyperwd/hyperwd.vim'                                   
+
 ### License
 
 MIT
