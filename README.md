@@ -36,7 +36,7 @@ $ vim +PlugInstall +qa
  #=============================================================================
  How to config the authorinfo?<br>
     vim ~/.vim/plugged/hyperwd.vim/plugin/hypwerwd.vim
-1.  \<F5\>     Change the theme (solarized or Zenburn)
+1.  \<F5\>,     Change the theme (solarized or Zenburn)
 1.  z[a|c|o|...],    The most basic commands are zc to close a fold and zo to open one. See
    :help fold-commands for full documentation.
 1.  Ctrl+n,  Open NERDTree with Ctrl+n
