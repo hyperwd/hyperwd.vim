@@ -1,7 +1,5 @@
-" Hyperwd's init.vim
+" Hyperwd's hyperwd.vim
 " ================
-"
-" Read the comments for the useful plugins' keystrokes.
 "
 " It meets the unadorned requirements of Python development, but any feature
 " request or bug report is welcome. Send mail to Hyperwd <dongwei_chao@163.com>.
@@ -9,8 +7,8 @@
 " Copyright (c) 2016 Hyperwd, and licensed under MIT:
 " https://opensource.org/licenses/MIT.
 "
-" use vim-plug to manage plugins, see
-" https://github.com/junegunn/vim-plug#usage
+" This plugin is used to manage vim settings for vim-plug.
+"
 " Thanks
 " for details
 
