@@ -20,15 +20,19 @@ filetype indent on
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-"set textwidth=79
+set textwidth=80
+set colorcolumn=81
+set wrap
+set linebreak
 set expandtab
 set autoindent
 set number
 set relativenumber
 set encoding=utf-8
+set showmatch
 
 "System clipboard
-set clipboard=unnamed
+"set clipboard=unnamed
 
 "Enable folding by indent
 set foldmethod=indent
@@ -40,6 +44,8 @@ set foldlevel=99
 let python_highlight_all=1
 syntax on
 
+"Enable folding with space
+"nnoremap <space> za
 
 "Enable split windows with ctrl+h,j,k,l
 nnoremap <C-J> <C-W><C-J>
@@ -52,11 +58,6 @@ let g:SimpylFold_docstring_preview=1
 
 "extra whitespace as bad,probably red color"
 "au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
-
-"youcompleteme:The former line ensures that the autocomplete window goes away
-"when you’re done with it, and the latter defines a shortcut for goto
-"definition."
-let g:ycm_autoclose_preview_window_after_completion=1
 
 "a bit of logic to define which scheme to use based upon the VIM mode
 if has('gui_running')
@@ -79,9 +80,9 @@ nmap <F8> :TagbarToggle<CR>
 "let g:tagbar_width = 30
 
 "authorinfo
-let g:vimrc_author='DeanDong' 
+let g:vimrc_author='Dong Wei Chao' 
 let g:vimrc_email='435904632@qq.com' 
-let g:vimrc_homepage='http://www.vimer.cn' 
+let g:vimrc_homepage='https://github.com/hyperwd' 
 nmap <F4> :AuthorInfoDetect<cr> 
 
 "vimball's install drawit.vim
