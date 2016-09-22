@@ -56,7 +56,7 @@ $ vim +PlugInstall +qa
    'majutsushi/tagbar'                                     
    'kien/ctrlp.vim'                                        
    'tpope/vim-fugitive'                                    
-   'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+   'Lokaltog/powerline', \{'rtp': 'powerline/bindings/vim/'\}
    'scrooloose/nerdcommenter'                              
    'hyperwd/hyperwd.vim'                                   
 
