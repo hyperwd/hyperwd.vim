@@ -11,7 +11,9 @@ and put it in the "~/.vim/autoload" directory.
 $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/hyperwd/vim-plug/master/plug.vim
 
-$ cp hyperwd.vim/int.vim ~/.vimrc
+$ wget https://raw.githubusercontent.com/hyperwd/hyperwd.vim/master/int.vim -O ~/int.vim
+
+$ cp ~/int.vim ~/.vimrc
 
 $ vim +PlugInstall +qa
 ```
