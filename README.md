@@ -13,7 +13,7 @@ $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 $ wget https://raw.githubusercontent.com/hyperwd/hyperwd.vim/master/int.vim -O ~/int.vim
 
-$ cp ~/int.vim ~/.vimrc
+$ mv ~/int.vim ~/.vimrc
 
 $ vim +PlugInstall +qa
 ```
