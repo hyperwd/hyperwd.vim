@@ -55,7 +55,8 @@ $ vim +PlugInstall +qa
    'altercation/vim-colors-solarized'                      
    'scrooloose/nerdtree'                                   
    'jistr/vim-nerdtree-tabs'                               
-   'majutsushi/tagbar'                                     
+   'majutsushi/tagbar'
+   'Valloric/YouCompleteMe'
    'kien/ctrlp.vim'                                        
    'tpope/vim-fugitive'                                    
    'Lokaltog/powerline', \{'rtp': 'powerline/bindings/vim/'\}
