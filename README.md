@@ -52,6 +52,12 @@ $ vim +PlugInstall +qa
 
 ### YouCompleteMe
 #Make sure you have Vim 7.4.1578 with Python 2 or Python 3 support.（ http://www.jianshu.com/p/aac78ff576c5 ）
+
+1. centos6.8    2.6.32-642.el6.x86_64
+```sh
+
+
+```
 1. ~/.vimrc 取消YouCompleteMe注释
 1. 执行安装（ https://github.com/hyperwd/YouCompleteMe ）
 ```sh
