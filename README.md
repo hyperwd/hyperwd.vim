@@ -53,6 +53,17 @@ $ cd ~/.vim/plugged/YouCompleteMe && ./install.py
 1.  Ctrl+p,   Check :help ctrlp-commands for other commands.
 
 
+
+### YouCompleteMe
+#Make sure you have Vim 7.4.1578 with Python 2 or Python 3 support.（http://www.jianshu.com/p/aac78ff576c5）
+1. ~/.vimrc 取消YouCompleteMe注释
+1. 执行安装（https://github.com/hyperwd/YouCompleteMe）
+```sh
+$ vim +PlugInstall +qa
+$ cd ~/.vim/plugged/YouCompleteMe && ./install.py
+
+```
+
 ### Plugins list
 
    'tmhedberg/SimpylFold'                                  
