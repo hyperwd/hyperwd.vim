@@ -56,11 +56,12 @@ $ vim +PlugInstall +qa
 centos6.8    2.6.32-642.el6.x86_64
 
 ```sh
-$ yum install automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel ncurses-devel
+$ yum install python-devel python3-devel ncurses-devel ( centos )
+$ apt-get python-dev python3-dev libncurses5-dev ( ubuntu )
 $ git clone https://github.com/vim/vim.git
 $ cd vim/src
 $ make clean
-$ ./configure --with-features=huge --enable-python3interp --enable-pythoninterp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/ --enable-rubyinterp --enable-luainterp --enable-perlinterp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/ --enable-multibyte --enable-cscope      --prefix=/usr/local/vim/
+$ ./configure --with-features=huge --enable-python3interp --enable-pythoninterp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/ --enable-rubyinterp --enable-luainterp --enable-perlinterp --with-python-config-dir=/usr/lib/python3.4/config-x86_64-linux-gnu/ --enable-multibyte --enable-cscope --prefix=/usr/local/vim/
 $ make install
 $ ln -s /usr/local/vim/bin/vim /usr/bin/vim
 
@@ -68,8 +69,10 @@ $ ln -s /usr/local/vim/bin/vim /usr/bin/vim
 
 2. install YouCompleteMe
 ```sh
-$ grep "#Plug 'Valloric/YouCompleteMe'" ~/.vimrc|sed 's@Plug@Plug@g'
+$ grep -r "\"Plug 'Valloric/YouCompleteMe'" ~/.vimrc|sed 's@"Plug@Plug@' ~/.vimrc
 $ vim +PlugInstall +qa
+$ yum install cmake ( centos )
+$ apt-get install cmake ( ubuntu )
 $ cd ~/.vim/plugged/YouCompleteMe && ./install.py
 
 ```
