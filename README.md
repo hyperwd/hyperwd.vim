@@ -8,7 +8,6 @@ and put it in the "~/.vim/autoload" directory.
 ###### Unix
 
 ```sh
-$ "YouCompleteMe自动补全需要vim版本较高，可编译安装http://www.jianshu.com/p/aac78ff576c5"
 
 $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/hyperwd/vim-plug/master/plug.vim
@@ -19,9 +18,6 @@ $ mv ~/int.vim ~/.vimrc
 
 $ vim +PlugInstall +qa
 
-$ "安装YouCompleteMe库"
-
-$ cd ~/.vim/plugged/YouCompleteMe && ./install.py
 
 ```
 
