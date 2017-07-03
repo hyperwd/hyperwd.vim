@@ -51,7 +51,7 @@ $ vim +PlugInstall +qa
 
 
 ### YouCompleteMe
-#Make sure you have Vim 7.4.1578 with Python 2 or Python 3 support.（ http://www.jianshu.com/p/aac78ff576c5 ）
+#Make sure you have Vim 7.4.1578 with Python 2 or Python 3 support.
 ```sh
 
 $ git clone https://github.com/vim/vim.git
