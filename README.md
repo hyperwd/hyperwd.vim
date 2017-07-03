@@ -52,15 +52,26 @@ $ vim +PlugInstall +qa
 
 ### YouCompleteMe
 #Make sure you have Vim 7.4.1578 with Python 2 or Python 3 support.（ http://www.jianshu.com/p/aac78ff576c5 ）
-
-1. centos6.8    2.6.32-642.el6.x86_64
 ```sh
 
+$ git clone https://github.com/vim/vim.git
+$ cd vim/src
+$ make clean
+./configure --with-features=huge --enable-python3interp --enable-pythoninterp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/ --enable-rubyinterp --enable-luainterp --enable-perlinterp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/ --enable-multibyte --enable-cscope      --prefix=/usr/local/vim/
+sudo make install
 
 ```
-1. ~/.vimrc 取消YouCompleteMe注释
-1. 执行安装（ https://github.com/hyperwd/YouCompleteMe ）
+
+2. centos6.8    2.6.32-642.el6.x86_64
 ```sh
+
+$ yum install automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel
+
+```
+3. ~/.vimrc 取消YouCompleteMe注释
+4. 执行安装（ https://github.com/hyperwd/YouCompleteMe ）
+```sh
+
 $ vim +PlugInstall +qa
 $ cd ~/.vim/plugged/YouCompleteMe && ./install.py
 
