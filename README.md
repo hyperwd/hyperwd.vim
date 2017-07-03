@@ -58,7 +58,7 @@ $ git clone https://github.com/vim/vim.git
 $ cd vim/src
 $ make clean
 $ ./configure --with-features=huge --enable-python3interp --enable-pythoninterp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/ --enable-rubyinterp --enable-luainterp --enable-perlinterp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/ --enable-multibyte --enable-cscope      --prefix=/usr/local/vim/
-sudo make install
+$ make install
 
 ```
 
