@@ -69,7 +69,7 @@ $ ln -s /usr/local/vim/bin/vim /usr/bin/vim
 
 2. install YouCompleteMe
 ```sh
-$ grep -r "\"Plug 'Valloric/YouCompleteMe'" ~/.vimrc|sed 's@"Plug@Plug@' ~/.vimrc
+$ grep -r "\"Plug 'Valloric/YouCompleteMe'" ~/.vimrc|sed -i 's@"Plug@Plug@' ~/.vimrc
 $ vim +PlugInstall +qa
 $ yum install cmake ( centos )
 $ apt-get install cmake ( ubuntu )
