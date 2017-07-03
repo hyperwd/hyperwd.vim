@@ -65,7 +65,7 @@ sudo make install
 2. centos6.8    2.6.32-642.el6.x86_64
 ```sh
 
-$ yum install automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel
+$ yum install automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel ncurses-devel
 
 ```
 3. install YouCompleteMe
