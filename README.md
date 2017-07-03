@@ -68,10 +68,9 @@ sudo make install
 $ yum install automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel
 
 ```
-3. ~/.vimrc 取消YouCompleteMe注释
-4. 执行安装（ https://github.com/hyperwd/YouCompleteMe ）
+3. install YouCompleteMe
 ```sh
-
+$ grep "Plug 'Valloric/YouCompleteMe'" ~/.vimrc|sed 's@Plug@#Plug@g'
 $ vim +PlugInstall +qa
 $ cd ~/.vim/plugged/YouCompleteMe && ./install.py
 
