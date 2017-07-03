@@ -68,7 +68,7 @@ $ ln -s /usr/local/vim/bin/vim /usr/bin/vim
 
 2. install YouCompleteMe
 ```sh
-$ grep "Plug 'Valloric/YouCompleteMe'" ~/.vimrc|sed 's@Plug@#Plug@g'
+$ grep "#Plug 'Valloric/YouCompleteMe'" ~/.vimrc|sed 's@Plug@Plug@g'
 $ vim +PlugInstall +qa
 $ cd ~/.vim/plugged/YouCompleteMe && ./install.py
 
