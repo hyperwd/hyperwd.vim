@@ -68,15 +68,14 @@ $ vim +PlugInstall +qa
    'altercation/vim-colors-solarized'                      
    'scrooloose/nerdtree'                                   
    'jistr/vim-nerdtree-tabs'                               
-   'majutsushi/tagbar'
-   'davidhalter/jedi-vim'
+   'majutsushi/tagbar'  
+   'davidhalter/jedi-vim'  
    'kien/ctrlp.vim'                                        
    'tpope/vim-fugitive'                                    
-   'Lokaltog/powerline', \{'rtp': 'powerline/bindings/vim/'\}
+   'Lokaltog/powerline', \{'rtp': 'powerline/bindings/vim/'\}   
    'scrooloose/nerdcommenter'                              
    'hyperwd/hyperwd.vim'                                   
 
 ### License
 
 MIT
-
