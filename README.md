@@ -50,30 +50,12 @@ $ vim +PlugInstall +qa
 
 
 
-### YouCompleteMe
-#Make sure you have Vim 7.4.1578 with Python 2 or Python 3 support.
+### jedi-vim for pythoncomplete
 
-centos6.8    2.6.32-642.el6.x86_64
-
+1. install jedi-vim
 ```sh
-$ yum install python-devel python3-devel ncurses-devel ( centos )
-$ apt-get python-dev python3-dev libncurses5-dev ( ubuntu )
-$ git clone https://github.com/vim/vim.git
-$ cd vim/src
-$ make clean
-$ ./configure --with-features=huge --enable-python3interp --enable-pythoninterp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/ --enable-rubyinterp --enable-luainterp --enable-perlinterp --with-python-config-dir=/usr/lib/python3.4/config-x86_64-linux-gnu/ --enable-multibyte --enable-cscope --prefix=/usr/local/vim/
-$ make install
-$ ln -s /usr/local/vim/bin/vim /usr/bin/vim
-
-```
-
-2. install YouCompleteMe
-```sh
-$ grep -r "\"Plug 'Valloric/YouCompleteMe'" ~/.vimrc|sed -i 's@"Plug@Plug@' ~/.vimrc
+$ grep -r "\"Plug 'davidhalter/jedi-vim'" ~/.vimrc|sed -i 's@"Plug@Plug@' ~/.vimrc
 $ vim +PlugInstall +qa
-$ yum install cmake ( centos )
-$ apt-get install cmake ( ubuntu )
-$ cd ~/.vim/plugged/YouCompleteMe && ./install.py
 
 ```
 
@@ -87,7 +69,7 @@ $ cd ~/.vim/plugged/YouCompleteMe && ./install.py
    'scrooloose/nerdtree'                                   
    'jistr/vim-nerdtree-tabs'                               
    'majutsushi/tagbar'
-   'Valloric/YouCompleteMe'
+   'davidhalter/jedi-vim'
    'kien/ctrlp.vim'                                        
    'tpope/vim-fugitive'                                    
    'Lokaltog/powerline', \{'rtp': 'powerline/bindings/vim/'\}
