@@ -2,8 +2,8 @@
 
 ### Installation
 
-[Download plug.vim](https://raw.githubusercontent.com/hyperwd/vim-plug/master/
-plug.vim) and put it in the "~/.vim/autoload" directory.
+[Download plug.vim](https://raw.githubusercontent.com/hyperwd/vim-plug/m
+aster/plug.vim) and put it in the "~/.vim/autoload" directory.
 
 ###### Unix
 
@@ -28,9 +28,9 @@ $ vim +PlugInstall +qa
 
 ### Usage
 
-1.  \<F4\>,    when you type \<F4\>,this will add in the head of your source 
-file,and when you type \<F4\> again,It will update automatically.
- ###=============================================================================
+1.  \<F4\>, when you type \<F4\>, this will add in the head of your source 
+file, and when you type \<F4\> again, It will update automatically.
+ ###==========================================================================
  FileName: test.py                                                          
  Desc:                                                               
  Author: Dong Wei Chao                                                 
@@ -39,10 +39,10 @@ file,and when you type \<F4\> again,It will update automatically.
  Version: 0.0.1                                                         
  LastChange: 2016-09-22 15:32:04                                           
  History:                                                               
- ###=============================================================================
-2. How to config the authorinfo?  
+ ###==========================================================================
+2. How to config the authorinfo?   
     vim ~/.vim/plugged/hyperwd.vim/plugin/hypwerwd.vim
-3.  \<F5\>,     Change the theme (solarized or Zenburn)
+3.  \<F5\>,     Change the theme (solarized or Zenburn)   
 4.  z[a|c|o|...],    The most basic commands are zc to close a fold and zo to open one. See
    :help fold-commands for full documentation.
 5.  Ctrl+n,  Open NERDTree with Ctrl+n
