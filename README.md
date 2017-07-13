@@ -2,8 +2,8 @@
 
 ### Installation
 
-[Download plug.vim](https://raw.githubusercontent.com/hyperwd/vim-plug/master/plug.vim)
-and put it in the "~/.vim/autoload" directory.
+[Download plug.vim](https://raw.githubusercontent.com/hyperwd/vim-plug/master/
+plug.vim) and put it in the "~/.vim/autoload" directory.
 
 ###### Unix
 
@@ -28,8 +28,8 @@ $ vim +PlugInstall +qa
 
 ### Usage
 
-1.  \<F4\>,    when you type \<F4\>,this will add in the head of your source file,and
-   when you type \<F4\> again,It will update automatically.
+1.  \<F4\>,    when you type \<F4\>,this will add in the head of your source 
+file,and when you type \<F4\> again,It will update automatically.
  ###=============================================================================
  FileName: test.py                                                          
  Desc:                                                               
@@ -45,9 +45,9 @@ $ vim +PlugInstall +qa
 3.  \<F5\>,     Change the theme (solarized or Zenburn)
 4.  z[a|c|o|...],    The most basic commands are zc to close a fold and zo to open one. See
    :help fold-commands for full documentation.
-1.  Ctrl+n,  Open NERDTree with Ctrl+n
-1.  \<F8\>,    If you type the F8 key will toggle the Tagbar window.
-1.  Ctrl+p,   Check :help ctrlp-commands for other commands.
+5.  Ctrl+n,  Open NERDTree with Ctrl+n
+6.  \<F8\>,    If you type the F8 key will toggle the Tagbar window.
+7.  Ctrl+p,   Check :help ctrlp-commands for other commands.
 
 
 
