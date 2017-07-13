@@ -46,10 +46,10 @@ syntax on
 "nnoremap <space> za
 
 "Enable split windows with ctrl+h,j,k,l
-"nnoremap <C-J> <C-W><C-J>
-"nnoremap <C-K> <C-W><C-K>
-"nnoremap <C-L> <C-W><C-L>
-"nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 "simpylfold:see the docstrings for folded code
 let g:SimpylFold_docstring_preview=1
