@@ -85,3 +85,8 @@ nmap <F4> :AuthorInfoDetect<cr>
 
 "vimball's install drawit.vim
 "http://www.vim.org/scripts/script.php?script_id=40
+
+"<F2> set paste
+"<F3> set nopaste
+nmap <F2> :set paste<CR>
+nmap <F3> :set nopaste<CR>
