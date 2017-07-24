@@ -47,8 +47,9 @@ open one. See :help fold-commands for full documentation.
 5.  Ctrl+n,  Open NERDTree with Ctrl+n
 6.  \<F8\>,    If you type the F8 key will toggle the Tagbar window.
 7.  Ctrl+p,   Check :help ctrlp-commands for other commands.
-8.  \<F2\>,   :set paste 
-9.  \<F3\>,   :set nopaste 
+8.  \<F1\>,   :set fileencoding
+9.  \<F2\>,   :set paste 
+10.  \<F3\>,   :set nopaste 
 
 
 
