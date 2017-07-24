@@ -20,8 +20,8 @@ set softtabstop=4
 set shiftwidth=4
 set textwidth=79
 set colorcolumn=81
-set wrap
-set linebreak
+set nowrap
+set nolinebreak
 set expandtab
 set autoindent
 set number
@@ -29,6 +29,7 @@ set relativenumber
 set encoding=utf-8
 set showmatch
 set backspace=indent,eol,start
+set formatoptions-=t
 "System clipboard
 "set clipboard=unnamed
 
