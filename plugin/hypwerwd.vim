@@ -18,7 +18,7 @@ filetype indent on
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set textwidth=80
+set textwidth=79
 set colorcolumn=81
 set wrap
 set linebreak
@@ -28,7 +28,7 @@ set number
 set relativenumber
 set encoding=utf-8
 set showmatch
-
+set backspace=indent,eol,start
 "System clipboard
 "set clipboard=unnamed
 
