@@ -11,7 +11,7 @@
 $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/hyperwd/vim-plug/master/plug.vim
 
-$ wget https://raw.githubusercontent.com/hyperwd/hyperwd.vim/master/int.vim \
+$ wget --no-check-certificate https://raw.githubusercontent.com/hyperwd/hyperwd.vim/master/int.vim \
     -O ~/int.vim
 
 $ mv ~/int.vim ~/.vimrc
