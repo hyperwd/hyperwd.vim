@@ -23,7 +23,7 @@ Plug 'tmhedberg/SimpylFold'
 "Auto-Indentation
 Plug 'vim-scripts/indentpython.vim'
 "Syntax Checking/Highlighting
-Plug 'scrooloose/syntastic'
+Plug 'vim-syntastic/syntastic'
 "Color Schemes
 Plug 'jnurmine/Zenburn'
 Plug 'altercation/vim-colors-solarized'
