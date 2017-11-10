@@ -16,6 +16,12 @@ $ wget --no-check-certificate https://raw.githubusercontent.com/hyperwd/hyperwd.
 
 $ mv ~/int.vim ~/.vimrc
 
+$ pip install pylint
+
+$ pip install pyflakes
+
+$ pip install pycodestyle
+
 $ vim +PlugInstall +qa
 
 
@@ -66,7 +72,7 @@ $ vim +PlugInstall +qa
 
    'tmhedberg/SimpylFold'                                  
    'vim-scripts/indentpython.vim'                          
-   'scrooloose/syntastic'                                  
+   'vim-syntastic/syntastic'                                          
    'jnurmine/Zenburn'                                      
    'altercation/vim-colors-solarized'                      
    'scrooloose/nerdtree'                                   

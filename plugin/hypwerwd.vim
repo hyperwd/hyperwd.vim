@@ -93,3 +93,8 @@ nmap <F4> :AuthorInfoDetect<cr>
 nmap <F1> :set fileencoding<CR>
 nmap <F2> :set paste<CR>
 nmap <F3> :set nopaste<CR>
+
+"syn checkers
+"let g:syntastic_python_checkers = ['pyflakes']
+"let g:syntastic_python_checkers = ['pycodestyle']
+let g:syntastic_python_checkers = ['pylint']
