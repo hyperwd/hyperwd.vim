@@ -16,6 +16,8 @@ $ wget --no-check-certificate https://raw.githubusercontent.com/hyperwd/hyperwd.
 
 $ mv ~/int.vim ~/.vimrc
 
+$ apt-get install ctags
+
 $ pip install pylint(pylint3)
 
 $ pip install pyflakes(pyflakes3)  
