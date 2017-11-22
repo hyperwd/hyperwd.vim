@@ -16,11 +16,14 @@ $ wget --no-check-certificate https://raw.githubusercontent.com/hyperwd/hyperwd.
 
 $ mv ~/int.vim ~/.vimrc
 
-$ pip install pylint
+$ apt-get install pylint(pylint3)
+$ ln -s /usr/bin/pylint3 /usr/bin/pylint  
 
-$ pip install pyflakes
+$ apt-get install pyflakes(pyflakes3)  
+$ ln -s /usr/bin/pyflakes3 /usr/bin/pyflakes  
 
-$ pip install pycodestyle
+$ apt-get install pycodestyle(pycodetyle3)
+$ ln -s /usr/bin/pycodestyle3 /usr/bin/pycodestyle  
 
 $ vim +PlugInstall +qa
 
