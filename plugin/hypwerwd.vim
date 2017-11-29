@@ -96,5 +96,5 @@ nmap <F3> :set nopaste<CR>
 
 "syn checkers
 "let g:syntastic_python_checkers = ['pyflakes']
-let g:syntastic_python_checkers = ['pycodestyle']
-"let g:syntastic_python_checkers = ['pylint']
+"let g:syntastic_python_checkers = ['pycodestyle']
+let g:syntastic_python_checkers = ['pylint']
