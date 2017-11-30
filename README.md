@@ -18,6 +18,10 @@ $ mv ~/int.vim ~/.vimrc
 
 $ apt-get install ctags
 
+$ apt-get install cmake
+
+$ apt-get install python-dev python3-dev
+
 $ pip install pylint(pylint3)
 
 $ pip install pyflakes(pyflakes3)  
@@ -62,15 +66,8 @@ open one. See :help fold-commands for full documentation.
 12.  =,+,-,*,/,:,,,<,> Automatic-Space         
 
 
+### 默认补全选择Youcomplete,安装插件较大，安装前建议为git配代理
 
-### jedi-vim for pythoncomplete
-
-1. install jedi-vim
-```sh
-$ grep -r "\"Plug 'davidhalter/jedi-vim'" ~/.vimrc|sed -i 's@"Plug@Plug@' ~/.vimrc
-$ vim +PlugInstall +qa
-
-```
 
 ### Plugins list
 
@@ -82,7 +79,7 @@ $ vim +PlugInstall +qa
    'scrooloose/nerdtree'                                   
    'jistr/vim-nerdtree-tabs'                               
    'majutsushi/tagbar'  
-   'davidhalter/jedi-vim'  
+   'Valloric/YouCompleteMe'  
    'kien/ctrlp.vim'                                        
    'tpope/vim-fugitive'                                    
    'Lokaltog/powerline', \{'rtp': 'powerline/bindings/vim/'\}   

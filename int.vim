@@ -32,8 +32,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 "Tarbar based on ctags
 Plug 'majutsushi/tagbar'
-"jedi-vim
-"Plug 'davidhalter/jedi-vim'
+"Youcomplete
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 "Super Searching
 Plug 'kien/ctrlp.vim'
 "Git Integration
