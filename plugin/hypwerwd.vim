@@ -94,6 +94,37 @@ nmap <F1> :set fileencoding<CR>
 nmap <F2> :set paste<CR>
 nmap <F3> :set nopaste<CR>
 
+"自动补全括号，包括大括号
+:inoremap ( ()<ESC>i
+:inoremap ) <c-r>=ClosePair(')')<CR>
+:inoremap { {}<ESC>i
+:inoremap } <c-r>=ClosePair('}')<CR>
+:inoremap [ []<ESC>i
+:inoremap ] <c-r>=ClosePair(']')<CR>
+:inoremap < <><ESC>i
+:inoremap > <c-r>=ClosePair('>')<CR>
+
+"实现括号的自动配对后防止重复输入），适用python
+function! ClosePair(char)
+    if getline('.')[col('.') - 1] == a:char
+        return "\<Right>"
+    else
+      return a:char
+   endif
+endf
+
+"设置，后面自动添加空格
+"设置= + - * 前后自动空格
+au FileType python inoremap <buffer>= <c-r>=EqualSign('=')<CR>
+au FileType python inoremap <buffer>+ <c-r>=EqualSign('+')<CR>
+au FileType python inoremap <buffer>- <c-r>=EqualSign('-')<CR>
+au FileType python inoremap <buffer>* <c-r>=EqualSign('*')<CR>
+au FileType python inoremap <buffer>/ <c-r>=EqualSign('/')<CR>
+au FileType python inoremap <buffer>> <c-r>=EqualSign('>')<CR>
+au FileType python inoremap <buffer>< <c-r>=EqualSign('<')<CR>
+au FileType python inoremap <buffer>: <c-r>=Swap()<CR>
+au FileType python inoremap <buffer>, ,<space>
+
 "syn checkers
 "let g:syntastic_python_checkers = ['pyflakes']
 "let g:syntastic_python_checkers = ['pycodestyle']

@@ -57,7 +57,9 @@ open one. See :help fold-commands for full documentation.
 7.  Ctrl+p,   Check :help ctrlp-commands for other commands.
 8.  \<F1\>,   :set fileencoding
 9.  \<F2\>,   :set paste 
-10.  \<F3\>,   :set nopaste 
+10.  \<F3\>,   :set nopaste   
+11.  (),{},[],<> Auto-Complete      
+12.  =,+,-,*,/,:,,,<,> Automatic-Space         
 
 
 
