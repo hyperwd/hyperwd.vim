@@ -101,8 +101,8 @@ nmap <F3> :set nopaste<CR>
 :inoremap } <c-r>=ClosePair('}')<CR>
 :inoremap [ []<ESC>i
 :inoremap ] <c-r>=ClosePair(']')<CR>
-:inoremap < <><ESC>i
-:inoremap > <c-r>=ClosePair('>')<CR>
+:inoremap " ""<ESC>i
+:inoremap ' ''<ESC>i
 
 "实现括号的自动配对后防止重复输入），适用python
 function! ClosePair(char)
@@ -117,6 +117,7 @@ endf
 "设置= + - * 前后自动空格
 au FileType python inoremap <buffer>= <c-r>=EqualSign('=')<CR>
 au FileType python inoremap <buffer>+ <c-r>=EqualSign('+')<CR>
+au FileType python inoremap <buffer>! <c-r>=EqualSign('!')<CR>
 au FileType python inoremap <buffer>- <c-r>=EqualSign('-')<CR>
 au FileType python inoremap <buffer>* <c-r>=EqualSign('*')<CR>
 au FileType python inoremap <buffer>/ <c-r>=EqualSign('/')<CR>
@@ -134,28 +135,43 @@ function! Swap()
     endif
 endf
 
-"实现+-*/前后自动添加空格，逗号后面自动添加空格，适用python
-"支持+= -+ *= /+格式
+"设置= + - != >= += 前后自动空格
+
 function! EqualSign(char)
-    if a:char  =~ '='  && getline('.') =~ ".*("
-        return a:char
-    endif
-    let ex1 = getline('.')[col('.') - 3]
-    let ex2 = getline('.')[col('.') - 2]
-    if ex1 =~ "[-=+><>\/\*]"
-        if ex2 !~ "\s"
-            return "\<ESC>i".a:char."\<SPACE>"
-        else
-            return "\<ESC>xa".a:char."\<SPACE>"
-        endif
-    else
-        if ex2 !~ "\s"
-            return "\<SPACE>".a:char."\<SPACE>\<ESC>a"
-        else
-            return a:char."\<SPACE>\<ESC>a"
-        endif
-    endif
-endf 
+   if a:char  =~ '[!-=+><>\/\*]'  && getline('.') =~ ".*("
+      return a:char
+   endif
+   if a:char  =~ '[!-=+><>\/\*]'  && getline('.') =~ ".*["
+      return a:char
+   endif
+   if a:char  =~ '[!-=+><>\/\*]'  && getline('.') =~ ".*{"
+      return a:char
+   endif
+   if a:char  =~ '[!-=+><>\/\*]'  && getline('.') =~ ".*'"
+      return a:char
+   endif
+   if a:char  =~ '[!-=+><>\/\*]'  && getline('.') =~ '.*"'
+      return a:char
+   endif
+   let ex1 = getline('.')[col('.') - 3]
+   let ex2 = getline('.')[col('.') - 2]
+
+   if ex1 =~ "[!-=+><>\/\*]"
+      if ex2 !~ "[\<TAB>\<space>]"
+         return "\<ESC>i".a:char."\<SPACE>"
+      elseif ex1 =~ a:char && a:char =~ "[-+]"
+         return "\<ESC>xxxa".a:char.a:char
+      else
+         return "\<ESC>xa".a:char."\<SPACE>"
+      endif
+   else
+      if ex2 !~ "[\<TAB>\<space>]"
+         return "\<SPACE>".a:char."\<SPACE>\<ESC>a"
+      else
+         return a:char."\<SPACE>\<ESC>a"
+      endif
+   endif
+endf
 
 "syn checkers
 "let g:syntastic_python_checkers = ['pyflakes']
