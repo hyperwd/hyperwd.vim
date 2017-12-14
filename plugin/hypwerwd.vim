@@ -59,12 +59,13 @@ let g:SimpylFold_docstring_preview=1
 "au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 "a bit of logic to define which scheme to use based upon the VIM mode
-if has('gui_running')
-  set background=dark
-  colorscheme solarized
-else
-  colorscheme zenburn
-endif
+"if has('gui_running')
+"  set background=dark
+"  colorscheme solarized
+"else
+"  colorscheme zenburn
+"endif
+set background=dark
 
 "Solarized also ships with a dark and light theme. To make switching between
 "them very easy (by pressing F5)
