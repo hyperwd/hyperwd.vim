@@ -190,4 +190,4 @@ function AddTitle()
     call append(1,"# -*- coding: utf-8 -*-")
 endf
 
-map <F4> : call AddTitle() <cr>
+map <F6> : call AddTitle() <cr>
