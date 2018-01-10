@@ -22,6 +22,10 @@ call plug#begin()
 Plug 'tmhedberg/SimpylFold'
 "Auto-Indentation
 Plug 'vim-scripts/indentpython.vim'
+"Auto-complete
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'vim-syntastic/syntastic'
 "Syntax Checking/Highlighting
 Plug 'vim-syntastic/syntastic'
 "Color Schemes

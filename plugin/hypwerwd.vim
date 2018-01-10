@@ -178,3 +178,16 @@ endf
 "let g:syntastic_python_checkers = ['pyflakes']
 "let g:syntastic_python_checkers = ['pycodestyle']
 let g:syntastic_python_checkers = ['pylint']
+
+let g:UltiSnipsExpandTrigger="<F9>"
+let g:UltiSnipsJumpForwardTrigger="<C-N>"
+let g:UltiSnipsJumpBackwardTrigger="<C-P>"
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+let g:ycm_seed_identifiers_with_syntax=1
+
+function AddTitle()
+    call setline(1,"#!/usr/bin/env python")
+    call append(1,"# -*- coding: utf-8 -*-")
+endf
+
+map <F4> : call AddTitle() <cr>
