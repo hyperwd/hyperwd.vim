@@ -191,3 +191,6 @@ function AddTitle()
 endf
 
 map <F6> : call AddTitle() <cr>
+
+set t_Co=256 "xhsell等显示状态栏颜色"
+let g:airline_powerline_fonts = 1
