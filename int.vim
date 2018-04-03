@@ -43,7 +43,9 @@ Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 "Powerline is a status bar that displays things like the current virtualenv,
 "git branch, files being edited, and much more
-Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'Powerline/fonts',{'do':'./install.sh'}
 "authorinfo http://www.vim.org/scripts/script.php?script_id=2902
 Plug 'scrooloose/nerdcommenter'
 "the keyboard configs of plugins
