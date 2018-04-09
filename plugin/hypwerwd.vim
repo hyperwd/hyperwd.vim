@@ -85,6 +85,57 @@ let g:vimrc_email='435904632@qq.com'
 let g:vimrc_homepage='https://github.com/hyperwd' 
 nmap <F4> :AuthorInfoDetect<cr> 
 
+"设置，后面自动添加空格
+"设置= + - * :,前后自动空格
+au FileType python inoremap <buffer>= <c-r>=EqualSign('=')<CR>
+au FileType python inoremap <buffer>+ <c-r>=EqualSign('+')<CR>
+au FileType python inoremap <buffer>! <c-r>=EqualSign('!')<CR>
+au FileType python inoremap <buffer>- <c-r>=EqualSign('-')<CR>
+au FileType python inoremap <buffer>* <c-r>=EqualSign('*')<CR>
+au FileType python inoremap <buffer>/ <c-r>=EqualSign('/')<CR>
+au FileType python inoremap <buffer>> <c-r>=EqualSign('>')<CR>
+au FileType python inoremap <buffer>< <c-r>=EqualSign('<')<CR>
+au FileType python inoremap <buffer>: <c-r>=EqualSign(':')<CR>
+au FileType python inoremap <buffer>, <c-r>=EqualSign(',')<CR>
+
+"设置= + - != >= += ,前后自动空格
+
+function! EqualSign(char)
+   if a:char  =~ '[!-=+><>\/\*,]'  && getline('.') =~ ".*("
+      return a:char
+   endif
+   if a:char  =~ '[!-=+><>\/\*,]'  && getline('.') =~ ".*["
+      return a:char
+   endif
+   if a:char  =~ '[!-=+><>\/\*,]'  && getline('.') =~ ".*{"
+      return a:char
+   endif
+   if a:char  =~ '[!-=+><>\/\*,]'  && getline('.') =~ ".*'"
+      return a:char
+   endif
+   if a:char  =~ '[!-=+><>\/\*,]'  && getline('.') =~ '.*"'
+      return a:char
+   endif
+   let ex1 = getline('.')[col('.') - 3]
+   let ex2 = getline('.')[col('.') - 2]
+
+   if ex1 =~ "[!-=+><>\/\*,]"
+      if ex2 !~ "[\<TAB>\<space>]"
+         return "\<ESC>i".a:char."\<SPACE>"
+      elseif ex1 =~ a:char && a:char =~ "[-+]"
+         return "\<ESC>xxxa".a:char.a:char
+      else
+         return "\<ESC>xa".a:char."\<SPACE>"
+      endif
+   else
+      if ex2 !~ "[\<TAB>\<space>]"
+         return "\<SPACE>".a:char."\<SPACE>\<ESC>a"
+      else
+         return a:char."\<SPACE>\<ESC>a"
+      endif
+   endif
+endf
+
 "vimball's install drawit.vim
 "http://www.vim.org/scripts/script.php?script_id=40
 
