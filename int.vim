@@ -50,6 +50,8 @@ Plug 'Powerline/fonts',{'do':'./install.sh'}
 Plug 'scrooloose/nerdcommenter'
 "the keyboard configs of plugins
 Plug 'hyperwd/hyperwd.vim'
+"Auto Pairs
+Plug 'jiangmiao/auto-pairs'
 
 " All of your Plugins must be added before the following line
 call plug#end()
