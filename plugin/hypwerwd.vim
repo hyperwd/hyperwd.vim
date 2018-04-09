@@ -96,30 +96,30 @@ au FileType python inoremap <buffer>/ <c-r>=EqualSign('/')<CR>
 au FileType python inoremap <buffer>> <c-r>=EqualSign('>')<CR>
 au FileType python inoremap <buffer>< <c-r>=EqualSign('<')<CR>
 au FileType python inoremap <buffer>: <c-r>=EqualSign(':')<CR>
-au FileType python inoremap <buffer>, <c-r>=EqualSign(',')<CR>
+au FileType python inoremap <buffer>, ,<space>
 
 "设置= + - != >= += ,前后自动空格
 
 function! EqualSign(char)
-   if a:char  =~ '[!-=+><>\/\*,]'  && getline('.') =~ ".*("
+   if a:char  =~ '[!-=+><>\/\*]'  && getline('.') =~ ".*("
       return a:char
    endif
-   if a:char  =~ '[!-=+><>\/\*,]'  && getline('.') =~ ".*["
+   if a:char  =~ '[!-=+><>\/\*]'  && getline('.') =~ ".*["
       return a:char
    endif
-   if a:char  =~ '[!-=+><>\/\*,]'  && getline('.') =~ ".*{"
+   if a:char  =~ '[!-=+><>\/\*]'  && getline('.') =~ ".*{"
       return a:char
    endif
-   if a:char  =~ '[!-=+><>\/\*,]'  && getline('.') =~ ".*'"
+   if a:char  =~ '[!-=+><>\/\*]'  && getline('.') =~ ".*'"
       return a:char
    endif
-   if a:char  =~ '[!-=+><>\/\*,]'  && getline('.') =~ '.*"'
+   if a:char  =~ '[!-=+><>\/\*]'  && getline('.') =~ '.*"'
       return a:char
    endif
    let ex1 = getline('.')[col('.') - 3]
    let ex2 = getline('.')[col('.') - 2]
 
-   if ex1 =~ "[!-=+><>\/\*,]"
+   if ex1 =~ "[!-=+><>\/\*]"
       if ex2 !~ "[\<TAB>\<space>]"
          return "\<ESC>i".a:char."\<SPACE>"
       elseif ex1 =~ a:char && a:char =~ "[-+]"
