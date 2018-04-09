@@ -101,12 +101,12 @@ let g:UltiSnipsJumpBackwardTrigger="<C-P>"
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 let g:ycm_seed_identifiers_with_syntax=1
 
-function AddTitle()
+function FirstTitle()
     call setline(1,"#!/usr/bin/env python")
     call append(1,"# -*- coding: utf-8 -*-")
 endf
 
-map <F6> : call AddTitle() <cr>
+map <F6> : call FirstTitle() <cr>
 
 set t_Co=256 "xhsell等显示状态栏颜色"
 let g:airline_powerline_fonts = 1
