@@ -46,6 +46,12 @@ syntax on
 "Enable folding with space
 "nnoremap <space> za
 
+"Wq,Qa,Q!,Wa
+nnoremap Wq wq
+nnoremap Q! q!
+nnoremap Wa wa
+nnoremap Qa qa
+
 "Enable split windows with ctrl+h,j,k,l
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -95,90 +101,6 @@ nmap <F1> :set fileencoding<CR>
 nmap <F2> :set paste<CR>
 nmap <F3> :set nopaste<CR>
 
-"自动补全括号，包括大括号
-:inoremap ( ()<ESC>i
-:inoremap ) <c-r>=ClosePair(')')<CR>
-:inoremap { {}<ESC>i
-:inoremap } <c-r>=ClosePair('}')<CR>
-:inoremap [ []<ESC>i
-:inoremap ] <c-r>=ClosePair(']')<CR>
-:inoremap " ""<ESC>i
-:inoremap ' ''<ESC>i
-
-"实现括号的自动配对后防止重复输入），适用python
-function! ClosePair(char)
-    if getline('.')[col('.') - 1] == a:char
-        return "\<Right>"
-    else
-      return a:char
-   endif
-endf
-
-"设置，后面自动添加空格
-"设置= + - * 前后自动空格
-au FileType python inoremap <buffer>= <c-r>=EqualSign('=')<CR>
-au FileType python inoremap <buffer>+ <c-r>=EqualSign('+')<CR>
-au FileType python inoremap <buffer>! <c-r>=EqualSign('!')<CR>
-au FileType python inoremap <buffer>- <c-r>=EqualSign('-')<CR>
-au FileType python inoremap <buffer>* <c-r>=EqualSign('*')<CR>
-au FileType python inoremap <buffer>/ <c-r>=EqualSign('/')<CR>
-au FileType python inoremap <buffer>> <c-r>=EqualSign('>')<CR>
-au FileType python inoremap <buffer>< <c-r>=EqualSign('<')<CR>
-au FileType python inoremap <buffer>: <c-r>=Swap()<CR>
-au FileType python inoremap <buffer>, ,<space>
-
-"实现光标位置自动交换:) -->  ):
-function! Swap()
-    if getline('.')[col('.') - 1] =~ ")"
-        return "\<ESC>la:"
-    else
-        return ":"
-    endif
-endf
-
-"设置= + - != >= += 前后自动空格
-
-function! EqualSign(char)
-   if a:char  =~ '[!-=+><>\/\*]'  && getline('.') =~ ".*("
-      return a:char
-   endif
-   if a:char  =~ '[!-=+><>\/\*]'  && getline('.') =~ ".*["
-      return a:char
-   endif
-   if a:char  =~ '[!-=+><>\/\*]'  && getline('.') =~ ".*{"
-      return a:char
-   endif
-   if a:char  =~ '[!-=+><>\/\*]'  && getline('.') =~ ".*'"
-      return a:char
-   endif
-   if a:char  =~ '[!-=+><>\/\*]'  && getline('.') =~ '.*"'
-      return a:char
-   endif
-   let ex1 = getline('.')[col('.') - 3]
-   let ex2 = getline('.')[col('.') - 2]
-
-   if ex1 =~ "[!-=+><>\/\*]"
-      if ex2 !~ "[\<TAB>\<space>]"
-         return "\<ESC>i".a:char."\<SPACE>"
-      elseif ex1 =~ a:char && a:char =~ "[-+]"
-         return "\<ESC>xxxa".a:char.a:char
-      else
-         return "\<ESC>xa".a:char."\<SPACE>"
-      endif
-   else
-      if ex2 !~ "[\<TAB>\<space>]"
-         return "\<SPACE>".a:char."\<SPACE>\<ESC>a"
-      else
-         return a:char."\<SPACE>\<ESC>a"
-      endif
-   endif
-endf
-
-"syn checkers
-"let g:syntastic_python_checkers = ['pyflakes']
-"let g:syntastic_python_checkers = ['pycodestyle']
-let g:syntastic_python_checkers = ['pylint']
-
 let g:UltiSnipsExpandTrigger="<F9>"
 let g:UltiSnipsJumpForwardTrigger="<C-N>"
 let g:UltiSnipsJumpBackwardTrigger="<C-P>"
@@ -194,3 +116,5 @@ map <F6> : call AddTitle() <cr>
 
 set t_Co=256 "xhsell等显示状态栏颜色"
 let g:airline_powerline_fonts = 1
+
+
