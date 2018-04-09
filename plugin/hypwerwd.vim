@@ -47,10 +47,11 @@ syntax on
 "nnoremap <space> za
 
 "Wq,Qa,Q!,Wa
-nnoremap Wq wq
-nnoremap Q! q!
-nnoremap Wa wa
-nnoremap Qa qa
+nnoremap :W :w
+nnoremap :Wq :wq
+nnoremap :Q! :q!
+nnoremap :Wa :wa
+nnoremap :Qa :qa
 
 "Enable split windows with ctrl+h,j,k,l
 nnoremap <C-J> <C-W><C-J>
