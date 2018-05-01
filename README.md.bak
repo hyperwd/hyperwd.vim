@@ -2,32 +2,16 @@
 
 ### 安装
 
-### python3,vim
-确保已经安装python3,virtualenv及vim，并且vim启用python3支持
-
-###### Centos
+### Getting Help
+确保已经安装python3及vim，并且vim启用python3支持
+###### Ubuntu
 ```sh
-$ wget https://raw.githubusercontent.com/hyperwd/comtools/master/rpms/ \ 
-    python3/python-3.6.5-530.el7.x86_64.rpm -O ~/python-3.6.5-530.el7.x86_64.rpm
-
-$ rpm -ivh ~/python-3.6.5-530.el7.x86_64.rpm
-
-$ wget https://bootstrap.pypa.io/get-pip.py -O ~/get-pip.py
-
-$ python3 ~/get-pip.py
-
-$ wget https://raw.githubusercontent.com/hyperwd/comtools/master/rpms/ \ 
-    vim/vim-8.0-1768.el7.x86_64.rpm -O ~/vim-8.0-1768.el7.x86_64.rpm
-
-$ rpm -ivh ~/vim-8.0-1768.el7.x86_64.rpm
 
 ```
-###### 或自行编译安装，参考编译[安装python3,vim]()
 
 
-### 安装hyperwd.vim
 
-###### centos
+###### Ubuntu
 
 ```sh
 
@@ -39,7 +23,11 @@ $ wget --no-check-certificate https://raw.githubusercontent.com/hyperwd/hyperwd.
 
 $ mv ~/int.vim ~/.vimrc
 
-$ yum install ctags cmake
+$ apt-get install ctags
+
+$ apt-get install cmake
+
+$ apt-get install python-dev python3-dev
 
 $ pip install pylint(pylint3)
 
