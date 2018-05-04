@@ -7,17 +7,21 @@
 
 ###### Centos
 ```sh
-$ wget https://raw.githubusercontent.com/hyperwd/comtools/master/rpms/ \ 
-    python3/python-3.6.5-530.el7.x86_64.rpm -O ~/python-3.6.5-530.el7.x86_64.rpm
+$ wget https://raw.githubusercontent.com/hyperwd/comtools/master/rpms/python3/python-3.6.5-530.el7.x86_64.rpm \
+    -O ~/python-3.6.5-530.el7.x86_64.rpm
 
 $ rpm -ivh ~/python-3.6.5-530.el7.x86_64.rpm
 
 $ wget https://bootstrap.pypa.io/get-pip.py -O ~/get-pip.py
 
-$ python3 ~/get-pip.py
+$ python3 ~/get-pip.py --no-warn-script-location
 
-$ wget https://raw.githubusercontent.com/hyperwd/comtools/master/rpms/ \ 
-    vim/vim-8.0-1768.el7.x86_64.rpm -O ~/vim-8.0-1768.el7.x86_64.rpm
+$ ln -s /usr/local/python365/bin/pip3 /usr/bin/pip3
+
+$ ln -s /usr/local/python365/bin/pip3.6 /usr/bin/pip3.6
+
+$ wget https://raw.githubusercontent.com/hyperwd/comtools/master/rpms/vim/vim-8.0-1768.el7.x86_64.rpm \
+    -O ~/vim-8.0-1768.el7.x86_64.rpm
 
 $ rpm -ivh ~/vim-8.0-1768.el7.x86_64.rpm
 
