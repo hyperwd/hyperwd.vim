@@ -1,8 +1,6 @@
-# vim—python3,IDE环境配置                                                         
+# vim—python3,virtualenv等IDE环境配置                                                         
 
-### 安装
-
-### python3,vim
+### 第一步，安装python3,vim
 确保已经安装python3,virtualenv及vim，并且vim启用python3支持
 
 ###### Centos
@@ -12,44 +10,56 @@ $ wget https://raw.githubusercontent.com/hyperwd/comtools/master/rpms/python3/py
 
 $ rpm -ivh ~/python-3.6.5-530.el7.x86_64.rpm
 
-$ wget https://bootstrap.pypa.io/get-pip.py -O ~/get-pip.py
-
-$ python3 ~/get-pip.py --no-warn-script-location
-
-$ ln -s /usr/local/python365/bin/pip3 /usr/bin/pip3
-
-$ ln -s /usr/local/python365/bin/pip3.6 /usr/bin/pip3.6
-
 $ wget https://raw.githubusercontent.com/hyperwd/comtools/master/rpms/vim/vim-8.0-1768.el7.x86_64.rpm \
     -O ~/vim-8.0-1768.el7.x86_64.rpm
 
 $ rpm -ivh ~/vim-8.0-1768.el7.x86_64.rpm
 
+$ echo 'export PATH="$PATH:/usr/local/python365/bin:/usr/local/vim/bin"' >> ~/.bashrc
+
+$ source ~/.bashrc
+
+$ wget https://bootstrap.pypa.io/get-pip.py -O ~/get-pip.py
+
+$ python3 ~/get-pip.py
+
 ```
 ###### 或自行编译安装，参考编译[安装python3,vim]()
 
+### 第二步，安装virtualenv
+###### unix
+```sh
+$ pip3 install virtualenv
+$ virtualenv -p /usr/local/python365/bin/python3 /opt/virt
+$ source /opt/virt/bin/activate
+$ activate
+```
 
-### 安装hyperwd.vim
+### 第三步，安装hyperwd.vim
 
 ###### centos
 
 ```sh
 
+$ source /opt/virt/bin/activate
+
 $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/hyperwd/vim-plug/master/plug.vim
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
 
 $ wget --no-check-certificate https://raw.githubusercontent.com/hyperwd/hyperwd.vim/master/int.vim \
     -O ~/int.vim
 
 $ mv ~/int.vim ~/.vimrc
 
-$ yum install ctags cmake
+$ yum install ctags cmake -y
 
-$ pip install pylint(pylint3)
+$ pip3 install pylint
 
-$ pip install pyflakes(pyflakes3)  
+$ pip3 install pyflakes
 
-$ pip install pycodestyle(pycodetyle3)(recommend)
+$ pip3 install pycodestyle
+
+$ pip3 install shadowsocks(建议配置代理)
 
 $ vim +PlugInstall +qa
 
