@@ -1,7 +1,6 @@
 # vim—python3,virtualenv等IDE环境配置                                                         
-
+需要安装python3,virtualenv及vim，并且vim启用python3支持
 ### 第一步，安装python3,vim
-确保已经安装python3,virtualenv及vim，并且vim启用python3支持
 
 ###### Centos
 ```sh
