@@ -22,6 +22,8 @@ $ wget https://bootstrap.pypa.io/get-pip.py -O ~/get-pip.py
 
 $ python3 ~/get-pip.py
 
+$ yum install -y git
+
 ```
 ###### 或自行编译安装，参考编译[安装python3,vim]()
 
