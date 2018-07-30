@@ -31,7 +31,6 @@ $ python3 ~/get-pip.py
 $ pip3 install virtualenv
 $ virtualenv -p /usr/local/python365/bin/python3 /opt/virt
 $ source /opt/virt/bin/activate
-$ activate
 ```
 
 ### 第三步，安装hyperwd.vim
