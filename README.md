@@ -33,6 +33,7 @@ $ yum install -y git
 $ pip3 install virtualenv
 $ virtualenv -p /usr/local/python365/bin/python3 /opt/virt
 $ source /opt/virt/bin/activate
+$ deactivate
 ```
 
 ### 第三步，安装hyperwd.vim
