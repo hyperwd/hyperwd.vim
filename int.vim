@@ -52,6 +52,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'hyperwd/hyperwd.vim'
 "Auto Pairs
 Plug 'jiangmiao/auto-pairs'
+"multiple selections for Vim
+Plug 'terryma/vim-multiple-cursors'
 
 " All of your Plugins must be added before the following line
 call plug#end()
