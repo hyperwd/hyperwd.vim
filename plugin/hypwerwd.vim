@@ -146,20 +146,12 @@ nmap <F1> :set fileencoding<CR>
 nmap <F2> :set paste<CR>
 nmap <F3> :set nopaste<CR>
 
-let g:UltiSnipsExpandTrigger="<F9>"
-let g:UltiSnipsJumpForwardTrigger="<C-N>"
-let g:UltiSnipsJumpBackwardTrigger="<C-P>"
+let g:UltiSnipsExpandTrigger="<C-J>"
+let g:UltiSnipsJumpForwardTrigger="<C-B>"
+let g:UltiSnipsJumpBackwardTrigger="<C-Z>"
+let g:UltiSnipsEditSplit="vertical"
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 let g:ycm_seed_identifiers_with_syntax=1
 
-function FirstTitle()
-    call setline(1,"#!/usr/bin/env python")
-    call append(1,"# -*- coding: utf-8 -*-")
-endf
-
-map <F6> : call FirstTitle() <cr>
-
 set t_Co=256 "xhsell等显示状态栏颜色"
 let g:airline_powerline_fonts = 1
-
-
