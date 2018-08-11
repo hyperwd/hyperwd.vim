@@ -44,13 +44,13 @@ let python_highlight_all=1
 syntax on
 
 "Enable folding with space
-"nnoremap <space> za
+nmap <space> za
 
 "Enable split windows with ctrl+h,j,k,l
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+"nnoremap <C-J> <C-W><C-J>
+"nnoremap <C-K> <C-W><C-K>
+"nnoremap <C-L> <C-W><C-L>
+"nnoremap <C-H> <C-W><C-H>
 
 "simpylfold:see the docstrings for folded code
 let g:SimpylFold_docstring_preview=1
@@ -69,75 +69,21 @@ set background=dark
 
 "Solarized also ships with a dark and light theme. To make switching between
 "them very easy (by pressing F5)
-call togglebg#map("<F5>")
-
-"open NerdTree with ctrl+n
-nnoremap <C-n> :NERDTreeToggle<CR>
-"let NERDTreeWinSize=30
-
-"open Tagbar with <F8> 
-nmap <F8> :TagbarToggle<CR>
-"let g:tagbar_width = 30
+call togglebg#map("<F7>")
 
 "authorinfo
 let g:vimrc_author='Dong Wei Chao' 
 let g:vimrc_email='435904632@qq.com' 
 let g:vimrc_homepage='https://github.com/hyperwd' 
-nmap <F4> :AuthorInfoDetect<cr> 
+nmap <F8> :AuthorInfoDetect<cr> 
 
-"设置，后面自动添加空格
-"设置= + - * :,前后自动空格
-au FileType python inoremap <buffer>= <c-r>=EqualSign('=')<CR>
-au FileType python inoremap <buffer>+ <c-r>=EqualSign('+')<CR>
-au FileType python inoremap <buffer>! <c-r>=EqualSign('!')<CR>
-au FileType python inoremap <buffer>- <c-r>=EqualSign('-')<CR>
-au FileType python inoremap <buffer>* <c-r>=EqualSign('*')<CR>
-au FileType python inoremap <buffer>/ <c-r>=EqualSign('/')<CR>
-au FileType python inoremap <buffer>> <c-r>=EqualSign('>')<CR>
-au FileType python inoremap <buffer>< <c-r>=EqualSign('<')<CR>
-au FileType python inoremap <buffer>: <c-r>=EqualSign(':')<CR>
-au FileType python inoremap <buffer>, ,<space>
+"open NerdTree with ctrl+n
+nmap <F9> : NERDTreeToggle<CR>
+"let NERDTreeWinSize=30
 
-"设置= + - != >= += ,前后自动空格
-
-function! EqualSign(char)
-   if a:char  =~ '[!-=+><>\/\*]'  && getline('.') =~ ".*("
-      return a:char
-   endif
-   if a:char  =~ '[!-=+><>\/\*]'  && getline('.') =~ ".*["
-      return a:char
-   endif
-   if a:char  =~ '[!-=+><>\/\*]'  && getline('.') =~ ".*{"
-      return a:char
-   endif
-   if a:char  =~ '[!-=+><>\/\*]'  && getline('.') =~ ".*'"
-      return a:char
-   endif
-   if a:char  =~ '[!-=+><>\/\*]'  && getline('.') =~ '.*"'
-      return a:char
-   endif
-   let ex1 = getline('.')[col('.') - 3]
-   let ex2 = getline('.')[col('.') - 2]
-
-   if ex1 =~ "[!-=+><>\/\*]"
-      if ex2 !~ "[\<TAB>\<space>]"
-         return "\<ESC>i".a:char."\<SPACE>"
-      elseif ex1 =~ a:char && a:char =~ "[-+]"
-         return "\<ESC>xxxa".a:char.a:char
-      else
-         return "\<ESC>xa".a:char."\<SPACE>"
-      endif
-   else
-      if ex2 !~ "[\<TAB>\<space>]"
-         return "\<SPACE>".a:char."\<SPACE>\<ESC>a"
-      else
-         return a:char."\<SPACE>\<ESC>a"
-      endif
-   endif
-endf
-
-"vimball's install drawit.vim
-"http://www.vim.org/scripts/script.php?script_id=40
+"open Tagbar with <F8> 
+nmap <F10> : TagbarToggle<CR>
+"let g:tagbar_width = 30
 
 "<F1> set fileencoding
 "<F2> set paste
@@ -145,6 +91,11 @@ endf
 nmap <F1> :set fileencoding<CR>
 nmap <F2> :set paste<CR>
 nmap <F3> :set nopaste<CR>
+
+
+"vimball's install drawit.vim
+"http://www.vim.org/scripts/script.php?script_id=40
+
 
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
